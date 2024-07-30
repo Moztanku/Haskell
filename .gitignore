@@ -1,0 +1,21 @@
+# Local History for Visual Studio Code
+.history/
+
+# Svn folder
+.svn/
+
+*.zip
+*.out
+*.o
+
+# Visual Studio
+*.sln
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+
+# build directories
+build/
+target/
+bin/
