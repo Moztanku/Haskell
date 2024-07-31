@@ -71,13 +71,13 @@ $(BIN_DIR)/%: $(SRC_DIR)/%.go
 	$(info Compiling Go: $< -> $@)
 	@$(GO) $(GOFLAGS) -o $@ $<
 
-$(BIN_DIR)/%: $(SRC_DIR)/%.hs
+$(BIN_DIR)/%: $(SRC_DIR)/%.hs inc/*.hs
 	$(info Compiling Haskell: $< -> $@)
 	@$(HS) $(HSFLAGS) $< -o $@
 	@rm -f $(SRC_DIR)/*.hi $(SRC_DIR)/*.o
 	@rm -f $(INC_DIR)/*.hi $(INC_DIR)/*.o
 
-$(BIN_DIR)/%: $(SRC_DIR)/%.hs inc/*.hs
+$(BIN_DIR)/%: $(SRC_DIR)/%.hs
 	$(info Compiling Haskell: $< -> $@)
 	@$(HS) $(HSFLAGS) $< -o $@
 	@rm -f $(SRC_DIR)/*.hi $(SRC_DIR)/*.o
